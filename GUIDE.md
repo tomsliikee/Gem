@@ -32,19 +32,18 @@ In Flutter, widgets are the building blocks of the UI.
 
 ### 4. Callbacks and Event Listeners
 A callback is a function passed as an argument to another function, which is executed when a specific event occurs.
-* **Example in our code:** The window closing handler. When the user clicks the "X" button on the window, the C++ code receives a window-close signal and triggers a C++ callback function (`exit(0)`) to shut down the process instantly.
+* **Example in our code:** The window closing handler. When the user clicks the "X" button on the window, the webview triggers a Dart callback function (`exit(0)`) to shut down the process instantly and cleanly.
 
 ---
 
 ## 💻 Code Walkthrough: Dart (The UI & WebView)
 
-Here is the entire code for [lib/main.dart](file:///home/toms/projects/Gem/lib/main.dart).
+Here is the structure of the Dart application, starting with [lib/main.dart](file:///home/toms/projects/Gem/lib/main.dart).
 
 ```dart
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:desktop_webview_window/desktop_webview_window.dart';
+import 'src/app.dart';
 
 void main(List<String> args) {
   // 1. Required setup for desktop_webview_window.
@@ -56,195 +55,13 @@ void main(List<String> args) {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
-
-// MyApp inherits from StatelessWidget because the configuration of the root app
-// (theme, title, routes) never changes during runtime.
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Gem',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: const Color(0xFF1A73E8),
-        scaffoldBackgroundColor: const Color(0xFF131314), // Matches Gemini theme
-        useMaterial3: true,
-      ),
-      home: const LauncherScreen(),
-    );
-  }
-}
-
-// LauncherScreen is a StatefulWidget because the UI needs to change based on
-// whether the webview is currently launching, open, or closed.
-class LauncherScreen extends StatefulWidget {
-  const LauncherScreen({super.key});
-
-  @override
-  State<LauncherScreen> createState() => _LauncherScreenState();
-}
-
-// The State class containing variables that change during the app's lifetime.
-class _LauncherScreenState extends State<LauncherScreen> {
-  bool _isLaunching = false;   // True when the browser window is opening
-  Webview? _webviewWindow;      // Reference to the active browser window object
-
-  @override
-  void initState() {
-    super.initState();
-    // This callback runs immediately after the widget is drawn on the screen
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _launchGemini();
-    });
-  }
-
-  // Opens the browser window
-  Future<void> _launchGemini() async {
-    if (_isLaunching) return;
-    setState(() {
-      _isLaunching = true; // Updates the UI to show a loading indicator
-    });
-
-    try {
-      // Create Configuration is a class object that defines window parameters
-      final webview = await WebviewWindow.create(
-        configuration: const CreateConfiguration(
-          title: "Gemini",
-          titleBarTopPadding: 0,
-        ),
-      );
-
-      // Append Chrome strings to the user agent to prevent Google login blocks
-      await webview.setApplicationNameForUserAgent(" Chrome/122.0.0.0 Safari/537.36");
-
-      webview.setBrightness(Brightness.dark);
-      webview.launch("https://gemini.google.com/app");
-      
-      setState(() {
-        _webviewWindow = webview; // Assign the object to our state variable
-        _isLaunching = false;     // Hide the loading spinner
-      });
-
-      // Register an Event Listener to close the app if the webview is closed
-      webview.onClose.then((_) {
-        SystemNavigator.pop(); // Clean native exit call
-      });
-    } catch (e) {
-      setState(() {
-        _isLaunching = false;
-      });
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error launching Gemini: $e')),
-        );
-      }
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final hasActiveWindow = _webviewWindow != null;
-
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [Color(0xFF1E1E24), Color(0xFF131314)],
-          ),
-        ),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // App Logo Widget
-                Container(
-                  width: 120,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(28),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Color(0x224285F4),
-                        blurRadius: 25,
-                        spreadRadius: 8,
-                      ),
-                    ],
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(28),
-                    child: Image.asset(
-                      'assets/icon.png',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 32),
-                const Text(
-                  'Gem',
-                  style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1.2,
-                    color: Colors.white,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  hasActiveWindow 
-                      ? 'Gemini is running in a separate window.' 
-                      : 'Google Gemini Desktop Launcher',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey[400],
-                  ),
-                ),
-                const SizedBox(height: 48),
-                if (_isLaunching) ...[
-                  const CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF4285F4)),
-                  ),
-                ] else if (hasActiveWindow) ...[
-                  OutlinedButton.icon(
-                    onPressed: () {
-                      _webviewWindow?.close();
-                    },
-                    icon: const Icon(Icons.close),
-                    label: const Text('Close Gemini Window'),
-                    style: OutlinedButton.styleFrom(
-                      foregroundColor: Colors.redAccent,
-                      side: const BorderSide(color: Colors.redAccent),
-                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                    ),
-                  ),
-                ] else ...[
-                  ElevatedButton.icon(
-                    onPressed: _launchGemini,
-                    icon: const Icon(Icons.rocket_launch),
-                    label: const Text('Open Gemini'),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF4285F4),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
-                    ),
-                  ),
-                ],
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
 ```
+
+To maintain a clean architecture and follow the **Single Responsibility Principle**, the logic is separated into different files:
+
+- **[lib/src/app.dart](file:///home/toms/projects/Gem/lib/src/app.dart):** Contains the `MyApp` class which inherits from `StatelessWidget`. It sets up the theme, colors, and routing.
+- **[lib/src/ui/launcher_screen.dart](file:///home/toms/projects/Gem/lib/src/ui/launcher_screen.dart):** A `StatefulWidget` that manages the UI. It dynamically changes its content based on whether the webview is launching, open, or closed.
+- **[lib/src/services/webview_service.dart](file:///home/toms/projects/Gem/lib/src/services/webview_service.dart):** A service class that encapsulates the external API calls and window lifecycle. This is where the app intercepts the `onClose` event to execute `exit(0)`.
 
 ---
 

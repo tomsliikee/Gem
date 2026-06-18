@@ -25,7 +25,15 @@ Gem/
 ├── assets/
 │   └── icon.png          # App icon (transparent, upscaled vector logo)
 ├── lib/
-│   └── main.dart         # Flutter launcher logic & webview controller
+│   ├── main.dart         # Flutter application entry point
+│   └── src/
+│       ├── app.dart              # Main app configuration
+│       ├── services/
+│       │   └── webview_service.dart # Webview & lifecycle logic
+│       └── ui/
+│           ├── launcher_screen.dart # Main user interface
+│           └── components/
+│               └── app_logo.dart    # Optimized logo widget
 ├── linux/
 │   ├── runner/
 │   │   └── my_application.cc  # C++ GTK Window lifecycle & hidden launcher

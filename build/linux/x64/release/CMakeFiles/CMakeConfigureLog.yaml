@@ -20,7 +20,6 @@ events:
     names:
       - "uname"
     candidate_directories:
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
@@ -28,7 +27,6 @@ events:
       - "/usr/bin/"
       - "/bin/"
     searched_directories:
-      - "/home/toms/.gemini/antigravity-cli/bin/uname"
       - "/home/toms/.local/bin/uname"
       - "/home/toms/flutter/bin/uname"
       - "/home/toms/bin/uname"
@@ -36,7 +34,6 @@ events:
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -73,16 +70,12 @@ events:
       - "ninja"
       - "samu"
     candidate_directories:
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
     searched_directories:
-      - "/home/toms/.gemini/antigravity-cli/bin/ninja-build"
-      - "/home/toms/.gemini/antigravity-cli/bin/ninja"
-      - "/home/toms/.gemini/antigravity-cli/bin/samu"
       - "/home/toms/.local/bin/ninja-build"
       - "/home/toms/.local/bin/ninja"
       - "/home/toms/.local/bin/samu"
@@ -98,7 +91,6 @@ events:
     found: "/usr/bin/ninja-build"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -127,7 +119,6 @@ events:
     names:
       - "/usr/bin/clang++"
     candidate_directories:
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
@@ -136,7 +127,6 @@ events:
     found: "/usr/bin/clang++"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -172,7 +162,6 @@ events:
     found: "/usr/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -225,14 +214,12 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/llvm-ar"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-ar"
       - "/home/toms/.local/bin/llvm-ar"
       - "/home/toms/flutter/bin/llvm-ar"
       - "/home/toms/bin/llvm-ar"
@@ -240,7 +227,6 @@ events:
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -271,14 +257,12 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/llvm-ranlib"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-ranlib"
       - "/home/toms/.local/bin/llvm-ranlib"
       - "/home/toms/flutter/bin/llvm-ranlib"
       - "/home/toms/bin/llvm-ranlib"
@@ -286,7 +270,6 @@ events:
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -317,14 +300,12 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/llvm-strip"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-strip"
       - "/home/toms/.local/bin/llvm-strip"
       - "/home/toms/flutter/bin/llvm-strip"
       - "/home/toms/bin/llvm-strip"
@@ -332,7 +313,6 @@ events:
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -363,14 +343,12 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/ld.lld"
-      - "/home/toms/.gemini/antigravity-cli/bin/ld.lld"
       - "/home/toms/.local/bin/ld.lld"
       - "/home/toms/flutter/bin/ld.lld"
       - "/home/toms/bin/ld.lld"
@@ -378,7 +356,6 @@ events:
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -409,14 +386,12 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/llvm-nm"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-nm"
       - "/home/toms/.local/bin/llvm-nm"
       - "/home/toms/flutter/bin/llvm-nm"
       - "/home/toms/bin/llvm-nm"
@@ -424,7 +399,6 @@ events:
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -455,14 +429,12 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/llvm-objdump"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-objdump"
       - "/home/toms/.local/bin/llvm-objdump"
       - "/home/toms/flutter/bin/llvm-objdump"
       - "/home/toms/bin/llvm-objdump"
@@ -470,7 +442,6 @@ events:
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -501,14 +472,12 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/llvm-objcopy"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-objcopy"
       - "/home/toms/.local/bin/llvm-objcopy"
       - "/home/toms/flutter/bin/llvm-objcopy"
       - "/home/toms/bin/llvm-objcopy"
@@ -516,7 +485,6 @@ events:
     found: "/usr/bin/objcopy"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -547,14 +515,12 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/llvm-readelf"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-readelf"
       - "/home/toms/.local/bin/llvm-readelf"
       - "/home/toms/flutter/bin/llvm-readelf"
       - "/home/toms/bin/llvm-readelf"
@@ -562,7 +528,6 @@ events:
     found: "/usr/bin/readelf"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -593,20 +558,17 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/llvm-dlltool"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-dlltool"
       - "/home/toms/.local/bin/llvm-dlltool"
       - "/home/toms/flutter/bin/llvm-dlltool"
       - "/home/toms/bin/llvm-dlltool"
       - "/usr/local/bin/llvm-dlltool"
       - "/usr/bin/dlltool"
-      - "/home/toms/.gemini/antigravity-cli/bin/dlltool"
       - "/home/toms/.local/bin/dlltool"
       - "/home/toms/flutter/bin/dlltool"
       - "/home/toms/bin/dlltool"
@@ -614,7 +576,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -645,14 +606,12 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/llvm-addr2line"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-addr2line"
       - "/home/toms/.local/bin/llvm-addr2line"
       - "/home/toms/flutter/bin/llvm-addr2line"
       - "/home/toms/bin/llvm-addr2line"
@@ -660,7 +619,6 @@ events:
     found: "/usr/bin/addr2line"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -690,14 +648,12 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/tapi"
-      - "/home/toms/.gemini/antigravity-cli/bin/tapi"
       - "/home/toms/.local/bin/tapi"
       - "/home/toms/flutter/bin/tapi"
       - "/home/toms/bin/tapi"
@@ -705,7 +661,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -738,32 +693,27 @@ events:
       - "llvm-ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/llvm-ar-22.1"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-ar-22.1"
       - "/home/toms/.local/bin/llvm-ar-22.1"
       - "/home/toms/flutter/bin/llvm-ar-22.1"
       - "/home/toms/bin/llvm-ar-22.1"
       - "/usr/local/bin/llvm-ar-22.1"
       - "/usr/bin/llvm-ar-22"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-ar-22"
       - "/home/toms/.local/bin/llvm-ar-22"
       - "/home/toms/flutter/bin/llvm-ar-22"
       - "/home/toms/bin/llvm-ar-22"
       - "/usr/local/bin/llvm-ar-22"
       - "/usr/bin/llvm-ar22"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-ar22"
       - "/home/toms/.local/bin/llvm-ar22"
       - "/home/toms/flutter/bin/llvm-ar22"
       - "/home/toms/bin/llvm-ar22"
       - "/usr/local/bin/llvm-ar22"
       - "/usr/bin/llvm-ar"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-ar"
       - "/home/toms/.local/bin/llvm-ar"
       - "/home/toms/flutter/bin/llvm-ar"
       - "/home/toms/bin/llvm-ar"
@@ -771,7 +721,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -804,32 +753,27 @@ events:
       - "llvm-ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/llvm-ranlib-22.1"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-ranlib-22.1"
       - "/home/toms/.local/bin/llvm-ranlib-22.1"
       - "/home/toms/flutter/bin/llvm-ranlib-22.1"
       - "/home/toms/bin/llvm-ranlib-22.1"
       - "/usr/local/bin/llvm-ranlib-22.1"
       - "/usr/bin/llvm-ranlib-22"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-ranlib-22"
       - "/home/toms/.local/bin/llvm-ranlib-22"
       - "/home/toms/flutter/bin/llvm-ranlib-22"
       - "/home/toms/bin/llvm-ranlib-22"
       - "/usr/local/bin/llvm-ranlib-22"
       - "/usr/bin/llvm-ranlib22"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-ranlib22"
       - "/home/toms/.local/bin/llvm-ranlib22"
       - "/home/toms/flutter/bin/llvm-ranlib22"
       - "/home/toms/bin/llvm-ranlib22"
       - "/usr/local/bin/llvm-ranlib22"
       - "/usr/bin/llvm-ranlib"
-      - "/home/toms/.gemini/antigravity-cli/bin/llvm-ranlib"
       - "/home/toms/.local/bin/llvm-ranlib"
       - "/home/toms/flutter/bin/llvm-ranlib"
       - "/home/toms/bin/llvm-ranlib"
@@ -837,7 +781,6 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -870,14 +813,12 @@ events:
       - "clang-scan-deps"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
       - "/usr/local/bin/"
     searched_directories:
       - "/usr/bin/clang-scan-deps-22.1"
-      - "/home/toms/.gemini/antigravity-cli/bin/clang-scan-deps-22.1"
       - "/home/toms/.local/bin/clang-scan-deps-22.1"
       - "/home/toms/flutter/bin/clang-scan-deps-22.1"
       - "/home/toms/bin/clang-scan-deps-22.1"
@@ -885,7 +826,6 @@ events:
     found: "/usr/bin/clang-scan-deps-22"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -903,8 +843,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-9TMHth"
-      binary: "/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-9TMHth"
+      source: "/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-HatfwM"
+      binary: "/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-HatfwM"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/usr/bin/clang-scan-deps-22"
       CMAKE_CXX_FLAGS: ""
@@ -916,10 +856,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-9TMHth'
+        Change Dir: '/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-HatfwM'
         
-        Run Build Command(s): /usr/bin/ninja-build -v cmTC_ea5bb
-        [1/2] /usr/bin/clang++   -v -MD -MT CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/ninja-build -v cmTC_151e5
+        [1/2] /usr/bin/clang++   -v -MD -MT CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang version 22.1.7 (Fedora 22.1.7-1.fc44)
         Target: x86_64-redhat-linux-gnu
         Thread model: posix
@@ -932,7 +872,7 @@ events:
         Candidate multilib: 32;@m32
         Selected multilib: .;@m64
          (in-process)
-         "/usr/bin/clang-22" -cc1 -triple x86_64-redhat-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-9TMHth -v -fcoverage-compilation-dir=/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-9TMHth -resource-dir /usr/bin/../lib/clang/22 -dependency-file CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../include/c++/16 -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../include/c++/16/x86_64-redhat-linux -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../include/c++/16/backward -internal-isystem /usr/bin/../lib/clang/22/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -faddrsig -fdwarf2-cfi-asm -o CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/usr/bin/clang-22" -cc1 -triple x86_64-redhat-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-HatfwM -v -fcoverage-compilation-dir=/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-HatfwM -resource-dir /usr/bin/../lib/clang/22 -dependency-file CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../include/c++/16 -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../include/c++/16/x86_64-redhat-linux -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../include/c++/16/backward -internal-isystem /usr/bin/../lib/clang/22/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -faddrsig -fdwarf2-cfi-asm -o CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 22.1.7 based upon LLVM 22.1.7 default target x86_64-redhat-linux-gnu
         ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../x86_64-redhat-linux/include"
         ignoring nonexistent directory "/include"
@@ -945,7 +885,7 @@ events:
          /usr/local/include
          /usr/include
         End of search list.
-        [2/2] : && /usr/bin/clang++  -v -Wl,-v CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ea5bb   && :
+        [2/2] : && /usr/bin/clang++  -v -Wl,-v CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_151e5   && :
         clang version 22.1.7 (Fedora 22.1.7-1.fc44)
         Target: x86_64-redhat-linux-gnu
         Thread model: posix
@@ -957,7 +897,7 @@ events:
         Candidate multilib: .;@m64
         Candidate multilib: 32;@m32
         Selected multilib: .;@m64
-         "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ea5bb /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/bin/../lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/bin/../lib/clang/22/lib/x86_64-redhat-linux-gnu -L/usr/bin/../lib/gcc/x86_64-redhat-linux/16 -L/usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
+         "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_151e5 /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/bin/../lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/bin/../lib/clang/22/lib/x86_64-redhat-linux-gnu -L/usr/bin/../lib/gcc/x86_64-redhat-linux/16 -L/usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
         GNU ld version 2.46-3.fc44
         
       exitCode: 0
@@ -997,10 +937,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-9TMHth']
+        ignore line: [Change Dir: '/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-HatfwM']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/ninja-build -v cmTC_ea5bb]
-        ignore line: [[1/2] /usr/bin/clang++   -v -MD -MT CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/ninja-build -v cmTC_151e5]
+        ignore line: [[1/2] /usr/bin/clang++   -v -MD -MT CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang version 22.1.7 (Fedora 22.1.7-1.fc44)]
         ignore line: [Target: x86_64-redhat-linux-gnu]
         ignore line: [Thread model: posix]
@@ -1016,7 +956,7 @@ events:
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
         ignore line: [ (in-process)]
-        ignore line: [ "/usr/bin/clang-22" -cc1 -triple x86_64-redhat-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-9TMHth -v -fcoverage-compilation-dir=/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-9TMHth -resource-dir /usr/bin/../lib/clang/22 -dependency-file CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../include/c++/16 -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../include/c++/16/x86_64-redhat-linux -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../include/c++/16/backward -internal-isystem /usr/bin/../lib/clang/22/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -faddrsig -fdwarf2-cfi-asm -o CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/usr/bin/clang-22" -cc1 -triple x86_64-redhat-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-HatfwM -v -fcoverage-compilation-dir=/home/toms/projects/Gem/build/linux/x64/release/CMakeFiles/CMakeScratch/TryCompile-HatfwM -resource-dir /usr/bin/../lib/clang/22 -dependency-file CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../include/c++/16 -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../include/c++/16/x86_64-redhat-linux -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../include/c++/16/backward -internal-isystem /usr/bin/../lib/clang/22/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../x86_64-redhat-linux/include -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -faddrsig -fdwarf2-cfi-asm -o CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 22.1.7 based upon LLVM 22.1.7 default target x86_64-redhat-linux-gnu]
         ignore line: [ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../x86_64-redhat-linux/include"]
         ignore line: [ignoring nonexistent directory "/include"]
@@ -1029,7 +969,7 @@ events:
         ignore line: [ /usr/local/include]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /usr/bin/clang++  -v -Wl -v CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ea5bb   && :]
+        ignore line: [[2/2] : && /usr/bin/clang++  -v -Wl -v CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_151e5   && :]
         ignore line: [clang version 22.1.7 (Fedora 22.1.7-1.fc44)]
         ignore line: [Target: x86_64-redhat-linux-gnu]
         ignore line: [Thread model: posix]
@@ -1044,7 +984,7 @@ events:
         ignore line: [@m32]
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
-        link line: [ "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ea5bb /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/bin/../lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/bin/../lib/clang/22/lib/x86_64-redhat-linux-gnu -L/usr/bin/../lib/gcc/x86_64-redhat-linux/16 -L/usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
+        link line: [ "/usr/bin/ld" --hash-style=gnu --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_151e5 /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/bin/../lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/bin/../lib/clang/22/lib/x86_64-redhat-linux-gnu -L/usr/bin/../lib/gcc/x86_64-redhat-linux/16 -L/usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib64 -L/lib -L/usr/lib -v CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
           arg [/usr/bin/ld] ==> ignore
           arg [--hash-style=gnu] ==> ignore
           arg [--build-id] ==> ignore
@@ -1054,7 +994,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_ea5bb] ==> ignore
+          arg [cmTC_151e5] ==> ignore
           arg [/usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o] ==> obj [/usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o]
           arg [/usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o] ==> obj [/usr/bin/../lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o]
           arg [/usr/bin/../lib/gcc/x86_64-redhat-linux/16/crtbegin.o] ==> obj [/usr/bin/../lib/gcc/x86_64-redhat-linux/16/crtbegin.o]
@@ -1066,7 +1006,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_ea5bb.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_151e5.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1125,7 +1065,6 @@ events:
       - "pkg-config"
       - "pkgconf"
     candidate_directories:
-      - "/home/toms/.gemini/antigravity-cli/bin/"
       - "/home/toms/.local/bin/"
       - "/home/toms/flutter/bin/"
       - "/home/toms/bin/"
@@ -1149,8 +1088,6 @@ events:
       - "/opt/sbin/"
       - "/opt/"
     searched_directories:
-      - "/home/toms/.gemini/antigravity-cli/bin/pkg-config"
-      - "/home/toms/.gemini/antigravity-cli/bin/pkgconf"
       - "/home/toms/.local/bin/pkg-config"
       - "/home/toms/.local/bin/pkgconf"
       - "/home/toms/flutter/bin/pkg-config"
@@ -1162,7 +1099,6 @@ events:
     found: "/usr/bin/pkg-config"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1207,7 +1143,6 @@ events:
     found: "/usr/lib64/libgtk-3.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1254,7 +1189,6 @@ events:
     found: "/usr/lib64/libgdk-3.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1301,7 +1235,6 @@ events:
     found: "/usr/lib64/libpangocairo-1.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1348,7 +1281,6 @@ events:
     found: "/usr/lib64/libcairo-gobject.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1395,7 +1327,6 @@ events:
     found: "/usr/lib64/libgdk_pixbuf-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1442,7 +1373,6 @@ events:
     found: "/usr/lib64/libatk-1.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1489,7 +1419,6 @@ events:
     found: "/usr/lib64/libpango-1.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1536,7 +1465,6 @@ events:
     found: "/usr/lib64/libcairo.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1583,7 +1511,6 @@ events:
     found: "/usr/lib64/libharfbuzz.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1630,7 +1557,6 @@ events:
     found: "/usr/lib64/libgio-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1677,7 +1603,6 @@ events:
     found: "/usr/lib64/libgobject-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1724,7 +1649,6 @@ events:
     found: "/usr/lib64/libglib-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1771,7 +1695,6 @@ events:
     found: "/usr/lib64/libz.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1818,7 +1741,6 @@ events:
     found: "/usr/lib64/libglib-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1865,7 +1787,6 @@ events:
     found: "/usr/lib64/libgio-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1912,7 +1833,6 @@ events:
     found: "/usr/lib64/libgobject-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -1959,7 +1879,6 @@ events:
     found: "/usr/lib64/libglib-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2006,7 +1925,6 @@ events:
     found: "/usr/lib64/libwebkit2gtk-4.1.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2053,7 +1971,6 @@ events:
     found: "/usr/lib64/libgtk-3.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2100,7 +2017,6 @@ events:
     found: "/usr/lib64/libgdk-3.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2147,7 +2063,6 @@ events:
     found: "/usr/lib64/libpangocairo-1.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2194,7 +2109,6 @@ events:
     found: "/usr/lib64/libcairo-gobject.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2241,7 +2155,6 @@ events:
     found: "/usr/lib64/libgdk_pixbuf-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2288,7 +2201,6 @@ events:
     found: "/usr/lib64/libatk-1.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2335,7 +2247,6 @@ events:
     found: "/usr/lib64/libpango-1.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2382,7 +2293,6 @@ events:
     found: "/usr/lib64/libcairo.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2429,7 +2339,6 @@ events:
     found: "/usr/lib64/libharfbuzz.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2476,7 +2385,6 @@ events:
     found: "/usr/lib64/libsoup-3.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2523,7 +2431,6 @@ events:
     found: "/usr/lib64/libgio-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2570,7 +2477,6 @@ events:
     found: "/usr/lib64/libgmodule-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2617,7 +2523,6 @@ events:
     found: "/usr/lib64/libz.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2664,7 +2569,6 @@ events:
     found: "/usr/lib64/libjavascriptcoregtk-4.1.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2711,7 +2615,6 @@ events:
     found: "/usr/lib64/libgobject-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2758,7 +2661,6 @@ events:
     found: "/usr/lib64/libglib-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2805,7 +2707,6 @@ events:
     found: "/usr/lib64/libsoup-3.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2852,7 +2753,6 @@ events:
     found: "/usr/lib64/libgio-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2899,7 +2799,6 @@ events:
     found: "/usr/lib64/libgobject-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2946,7 +2845,6 @@ events:
     found: "/usr/lib64/libgmodule-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"
@@ -2993,7 +2891,6 @@ events:
     found: "/usr/lib64/libglib-2.0.so"
     search_context:
       ENV{PATH}:
-        - "/home/toms/.gemini/antigravity-cli/bin"
         - "/home/toms/.local/bin"
         - "/home/toms/flutter/bin"
         - "/home/toms/.local/bin"

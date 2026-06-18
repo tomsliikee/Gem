@@ -19,6 +19,12 @@ echo "Creating run.sh..."
 cat << EOF > "$PROJECT_DIR/run.sh"
 #!/bin/bash
 cd "$PROJECT_DIR"
+
+# WebKit optimization flags for Linux
+export WEBKIT_DISABLE_COMPOSITING_MODE=0
+export WEBKIT_FORCE_SANDBOX=0
+export WEBKIT_USE_SINGLE_WEB_PROCESS=1
+
 ./build/linux/x64/release/bundle/gem
 EOF
 chmod +x "$PROJECT_DIR/run.sh"
