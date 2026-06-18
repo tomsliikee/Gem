@@ -1,0 +1,15 @@
+/home/toms/projects/Gem/build/linux/x64/release/bundle/gem
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/icudtl.dat
+/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libflutter_linux_gtk.so
+/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libdesktop_webview_window_plugin.so
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/assets/icon.png
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/shaders/stretch_effect.frag
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/NativeAssetsManifest.json
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/AssetManifest.bin
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/FontManifest.json
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/NOTICES.Z
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/version.json
+/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libapp.so

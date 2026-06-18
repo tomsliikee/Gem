@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/toms/projects/Gem/build/linux/x64/release/cmake_install.cmake",
+		"/home/toms/projects/Gem/build/linux/x64/release/flutter/cmake_install.cmake",
+		"/home/toms/projects/Gem/build/linux/x64/release/runner/cmake_install.cmake",
+		"/home/toms/projects/Gem/build/linux/x64/release/plugins/desktop_webview_window/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

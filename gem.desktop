@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Gem
+Comment=Google Gemini Desktop (Flutter Edition)
+Exec="/home/toms/projects/Gem/run.sh"
+Icon=gem
+Terminal=false
+Categories=Network;WebBrowser;Office;
+StartupWMClass=com.google.gemini
