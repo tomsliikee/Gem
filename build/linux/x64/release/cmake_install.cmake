@@ -68,7 +68,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
      NOT IS_SYMLINK "$ENV{DESTDIR}/home/toms/projects/Gem/build/linux/x64/release/bundle/gem")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}/home/toms/projects/Gem/build/linux/x64/release/bundle/gem"
-         OLD_RPATH "/home/toms/projects/Gem/build/linux/x64/release/plugins/desktop_webview_window:/home/toms/projects/Gem/linux/flutter/ephemeral:"
+         OLD_RPATH "/home/toms/projects/Gem/build/linux/x64/release/plugins/screen_retriever_linux:/home/toms/projects/Gem/build/linux/x64/release/plugins/sqlite3_flutter_libs:/home/toms/projects/Gem/build/linux/x64/release/plugins/window_manager:/home/toms/projects/Gem/linux/flutter/ephemeral:"
          NEW_RPATH "$ORIGIN/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/toms/projects/Gem/build/linux/x64/release/bundle/gem")
@@ -102,14 +102,38 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libdesktop_webview_window_plugin.so")
+   "/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libscreen_retriever_linux_plugin.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/toms/projects/Gem/build/linux/x64/release/bundle/lib" TYPE FILE FILES "/home/toms/projects/Gem/build/linux/x64/release/plugins/desktop_webview_window/libdesktop_webview_window_plugin.so")
+  file(INSTALL DESTINATION "/home/toms/projects/Gem/build/linux/x64/release/bundle/lib" TYPE FILE FILES "/home/toms/projects/Gem/build/linux/x64/release/plugins/screen_retriever_linux/libscreen_retriever_linux_plugin.so")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libsqlite3_flutter_libs_plugin.so")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  file(INSTALL DESTINATION "/home/toms/projects/Gem/build/linux/x64/release/bundle/lib" TYPE FILE FILES "/home/toms/projects/Gem/build/linux/x64/release/plugins/sqlite3_flutter_libs/libsqlite3_flutter_libs_plugin.so")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libwindow_manager_plugin.so")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  file(INSTALL DESTINATION "/home/toms/projects/Gem/build/linux/x64/release/bundle/lib" TYPE FILE FILES "/home/toms/projects/Gem/build/linux/x64/release/plugins/window_manager/libwindow_manager_plugin.so")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Runtime" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -158,7 +182,10 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/toms/projects/Gem/build/linux/x64/release/flutter/cmake_install.cmake")
   include("/home/toms/projects/Gem/build/linux/x64/release/runner/cmake_install.cmake")
-  include("/home/toms/projects/Gem/build/linux/x64/release/plugins/desktop_webview_window/cmake_install.cmake")
+  include("/home/toms/projects/Gem/build/linux/x64/release/plugins/screen_retriever_linux/cmake_install.cmake")
+  include("/home/toms/projects/Gem/build/linux/x64/release/plugins/sqlite3_flutter_libs/cmake_install.cmake")
+  include("/home/toms/projects/Gem/build/linux/x64/release/plugins/window_manager/cmake_install.cmake")
+  include("/home/toms/projects/Gem/build/linux/x64/release/plugins/jni/cmake_install.cmake")
 
 endif()
 

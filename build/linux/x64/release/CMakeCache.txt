@@ -51,6 +51,33 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
+//C compiler
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/clang
+
+//LLVM archiver
+CMAKE_C_COMPILER_AR:FILEPATH=CMAKE_C_COMPILER_AR-NOTFOUND
+
+//`clang-scan-deps` dependency scanner
+CMAKE_C_COMPILER_CLANG_SCAN_DEPS:FILEPATH=/usr/bin/clang-scan-deps-22
+
+//Generate index for LLVM archive
+CMAKE_C_COMPILER_RANLIB:FILEPATH=CMAKE_C_COMPILER_RANLIB-NOTFOUND
+
+//Flags used by the C compiler during all build types.
+CMAKE_C_FLAGS:STRING=
+
+//Flags used by the C compiler during DEBUG builds.
+CMAKE_C_FLAGS_DEBUG:STRING=-g
+
+//Flags used by the C compiler during MINSIZEREL builds.
+CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+//Flags used by the C compiler during RELEASE builds.
+CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+//Flags used by the C compiler during RELWITHDEBINFO builds.
+CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
@@ -131,6 +158,21 @@ CMAKE_PROJECT_NAME:STATIC=runner
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
 
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=0.0.1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
+
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
 
@@ -196,8 +238,37 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=/home/toms/projects/Gem/build/linux/x64/release/_deps
+
+//Disables all attempts to download or update content and assumes
+// source dirs already exist
+FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
+
+//Enables QUIET option for all content population
+FETCHCONTENT_QUIET:BOOL=ON
+
+//When not empty, overrides where to find pre-populated content
+// for sqlite3
+FETCHCONTENT_SOURCE_DIR_SQLITE3:PATH=
+
+//Enables UPDATE_DISCONNECTED behavior for all content population
+FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of sqlite3
+FETCHCONTENT_UPDATES_DISCONNECTED_SQLITE3:BOOL=OFF
+
 //No help, variable specified on the command line.
 FLUTTER_TARGET_PLATFORM:UNINITIALIZED=linux-x64
+
+//JNI include directory
+JAVA_INCLUDE_PATH:PATH=JAVA_INCLUDE_PATH-NOTFOUND
+
+//jni_md.h jniport.h include directory
+JAVA_INCLUDE_PATH2:PATH=JAVA_INCLUDE_PATH2-NOTFOUND
+
+//Java Virtual Machine library
+JAVA_JVM_LIBRARY:FILEPATH=/usr/lib/jvm/jre/lib/server/libjvm.so
 
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
@@ -206,13 +277,22 @@ PKG_CONFIG_ARGN:STRING=
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Value Computed by CMake
-desktop_webview_window_BINARY_DIR:STATIC=/home/toms/projects/Gem/build/linux/x64/release/plugins/desktop_webview_window
+jni_BINARY_DIR:STATIC=/home/toms/projects/Gem/build/linux/x64/release/plugins/jni
 
 //Value Computed by CMake
-desktop_webview_window_IS_TOP_LEVEL:STATIC=OFF
+jni_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-desktop_webview_window_SOURCE_DIR:STATIC=/home/toms/projects/Gem/linux/flutter/ephemeral/.plugin_symlinks/desktop_webview_window/linux
+jni_SOURCE_DIR:STATIC=/home/toms/projects/Gem/linux/flutter/ephemeral/.plugin_symlinks/jni/linux
+
+//Value Computed by CMake
+jni_library_BINARY_DIR:STATIC=/home/toms/projects/Gem/build/linux/x64/release/plugins/jni/shared
+
+//Value Computed by CMake
+jni_library_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+jni_library_SOURCE_DIR:STATIC=/home/toms/projects/Gem/linux/flutter/ephemeral/.plugin_symlinks/jni/src
 
 //Path to a library.
 pkgcfg_lib_GIO_gio-2.0:FILEPATH=/usr/lib64/libgio-2.0.so
@@ -265,72 +345,6 @@ pkgcfg_lib_GTK_pangocairo-1.0:FILEPATH=/usr/lib64/libpangocairo-1.0.so
 //Path to a library.
 pkgcfg_lib_GTK_z:FILEPATH=/usr/lib64/libz.so
 
-//Path to a library.
-pkgcfg_lib_LibSoup_gio-2.0:FILEPATH=/usr/lib64/libgio-2.0.so
-
-//Path to a library.
-pkgcfg_lib_LibSoup_glib-2.0:FILEPATH=/usr/lib64/libglib-2.0.so
-
-//Path to a library.
-pkgcfg_lib_LibSoup_gmodule-2.0:FILEPATH=/usr/lib64/libgmodule-2.0.so
-
-//Path to a library.
-pkgcfg_lib_LibSoup_gobject-2.0:FILEPATH=/usr/lib64/libgobject-2.0.so
-
-//Path to a library.
-pkgcfg_lib_LibSoup_soup-3.0:FILEPATH=/usr/lib64/libsoup-3.0.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_atk-1.0:FILEPATH=/usr/lib64/libatk-1.0.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_cairo:FILEPATH=/usr/lib64/libcairo.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_cairo-gobject:FILEPATH=/usr/lib64/libcairo-gobject.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_gdk-3:FILEPATH=/usr/lib64/libgdk-3.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_gdk_pixbuf-2.0:FILEPATH=/usr/lib64/libgdk_pixbuf-2.0.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_gio-2.0:FILEPATH=/usr/lib64/libgio-2.0.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_glib-2.0:FILEPATH=/usr/lib64/libglib-2.0.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_gmodule-2.0:FILEPATH=/usr/lib64/libgmodule-2.0.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_gobject-2.0:FILEPATH=/usr/lib64/libgobject-2.0.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_gtk-3:FILEPATH=/usr/lib64/libgtk-3.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_harfbuzz:FILEPATH=/usr/lib64/libharfbuzz.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_javascriptcoregtk-4.1:FILEPATH=/usr/lib64/libjavascriptcoregtk-4.1.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_pango-1.0:FILEPATH=/usr/lib64/libpango-1.0.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_pangocairo-1.0:FILEPATH=/usr/lib64/libpangocairo-1.0.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_soup-3.0:FILEPATH=/usr/lib64/libsoup-3.0.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_webkit2gtk-4.1:FILEPATH=/usr/lib64/libwebkit2gtk-4.1.so
-
-//Path to a library.
-pkgcfg_lib_WebKit_z:FILEPATH=/usr/lib64/libz.so
-
 //Value Computed by CMake
 runner_BINARY_DIR:STATIC=/home/toms/projects/Gem/build/linux/x64/release/runner
 
@@ -339,6 +353,33 @@ runner_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 runner_SOURCE_DIR:STATIC=/home/toms/projects/Gem/linux/runner
+
+//Value Computed by CMake
+screen_retriever_linux_BINARY_DIR:STATIC=/home/toms/projects/Gem/build/linux/x64/release/plugins/screen_retriever_linux
+
+//Value Computed by CMake
+screen_retriever_linux_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+screen_retriever_linux_SOURCE_DIR:STATIC=/home/toms/projects/Gem/linux/flutter/ephemeral/.plugin_symlinks/screen_retriever_linux/linux
+
+//Value Computed by CMake
+sqlite3_flutter_libs_BINARY_DIR:STATIC=/home/toms/projects/Gem/build/linux/x64/release/plugins/sqlite3_flutter_libs
+
+//Value Computed by CMake
+sqlite3_flutter_libs_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+sqlite3_flutter_libs_SOURCE_DIR:STATIC=/home/toms/projects/Gem/linux/flutter/ephemeral/.plugin_symlinks/sqlite3_flutter_libs/linux
+
+//Value Computed by CMake
+window_manager_BINARY_DIR:STATIC=/home/toms/projects/Gem/build/linux/x64/release/plugins/window_manager
+
+//Value Computed by CMake
+window_manager_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+window_manager_SOURCE_DIR:STATIC=/home/toms/projects/Gem/linux/flutter/ephemeral/.plugin_symlinks/window_manager/linux
 
 
 ########################
@@ -381,6 +422,24 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER
+CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_AR
+CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_CLANG_SCAN_DEPS
+CMAKE_C_COMPILER_CLANG_SCAN_DEPS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
+CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS
+CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
+CMAKE_C_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_MINSIZEREL
+CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_RELEASE
+CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
+CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.
@@ -435,7 +494,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -587,90 +646,22 @@ GTK_gtk+-3.0_INCLUDEDIR:INTERNAL=
 GTK_gtk+-3.0_LIBDIR:INTERNAL=
 GTK_gtk+-3.0_PREFIX:INTERNAL=
 GTK_gtk+-3.0_VERSION:INTERNAL=
-LibSoup_CFLAGS:INTERNAL=-I/usr/include/libsoup-3.0;-I/usr/include;-I/usr/include/glib-2.0;-I/usr/lib64/glib-2.0/include;-I/usr/include/libmount;-I/usr/include/blkid;-I/usr/include/sysprof-6;-pthread;-DWITH_GZFILEOP
-LibSoup_CFLAGS_I:INTERNAL=
-LibSoup_CFLAGS_OTHER:INTERNAL=-pthread;-DWITH_GZFILEOP
-LibSoup_FOUND:INTERNAL=1
-LibSoup_INCLUDEDIR:INTERNAL=/usr/include
-LibSoup_INCLUDE_DIRS:INTERNAL=/usr/include/libsoup-3.0;/usr/include;/usr/include/glib-2.0;/usr/lib64/glib-2.0/include;/usr/include/libmount;/usr/include/blkid;/usr/include/sysprof-6
-LibSoup_LDFLAGS:INTERNAL=-L/usr/lib64;-lsoup-3.0;-lgio-2.0;-lgobject-2.0;-lgmodule-2.0;-pthread;-lglib-2.0
-LibSoup_LDFLAGS_OTHER:INTERNAL=-pthread
-LibSoup_LIBDIR:INTERNAL=/usr/lib64
-LibSoup_LIBRARIES:INTERNAL=soup-3.0;gio-2.0;gobject-2.0;gmodule-2.0;glib-2.0
-LibSoup_LIBRARY_DIRS:INTERNAL=/usr/lib64
-LibSoup_LIBS:INTERNAL=
-LibSoup_LIBS_L:INTERNAL=
-LibSoup_LIBS_OTHER:INTERNAL=
-LibSoup_LIBS_PATHS:INTERNAL=
-LibSoup_MODULE_NAME:INTERNAL=libsoup-3.0
-LibSoup_PREFIX:INTERNAL=/usr
-LibSoup_STATIC_CFLAGS:INTERNAL=-I/usr/include/libsoup-3.0;-I/usr/include;-I/usr/include/glib-2.0;-I/usr/lib64/glib-2.0/include;-I/usr/include/libmount;-I/usr/include/blkid;-I/usr/include/sysprof-6;-pthread;-DWITH_GZFILEOP
-LibSoup_STATIC_CFLAGS_I:INTERNAL=
-LibSoup_STATIC_CFLAGS_OTHER:INTERNAL=-pthread;-DWITH_GZFILEOP
-LibSoup_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/libsoup-3.0;/usr/include;/usr/include/glib-2.0;/usr/lib64/glib-2.0/include;/usr/include/libmount;/usr/include/blkid;/usr/include/sysprof-6
-LibSoup_STATIC_LDFLAGS:INTERNAL=-L/usr/lib64;-lsoup-3.0;-ldl;-lgio-2.0;-lgobject-2.0;-lffi;-lgmodule-2.0;-pthread;-lglib-2.0;-latomic;-lm;-pthread;-lmount;-lblkid;-lselinux;-lsepol;-lpcre2-8;-lpthread;-lsysprof-capture-4;-Wl,-z,nodelete;-pthread;-lsqlite3;-lm;-lpsl;-lbrotlidec;-lbrotlicommon;-lgssapi_krb5;-lkrb5;-lk5crypto;-lcom_err;-lkrb5support;-lz;-lnghttp2
-LibSoup_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread;-Wl,-z,nodelete;-pthread
-LibSoup_STATIC_LIBDIR:INTERNAL=
-LibSoup_STATIC_LIBRARIES:INTERNAL=soup-3.0;dl;gio-2.0;gobject-2.0;ffi;gmodule-2.0;glib-2.0;atomic;m;mount;blkid;selinux;sepol;pcre2-8;pthread;sysprof-capture-4;sqlite3;m;psl;brotlidec;brotlicommon;gssapi_krb5;krb5;k5crypto;com_err;krb5support;z;nghttp2
-LibSoup_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib64
-LibSoup_STATIC_LIBS:INTERNAL=
-LibSoup_STATIC_LIBS_L:INTERNAL=
-LibSoup_STATIC_LIBS_OTHER:INTERNAL=
-LibSoup_STATIC_LIBS_PATHS:INTERNAL=
-LibSoup_VERSION:INTERNAL=3.6.6
-LibSoup_libsoup-3.0_INCLUDEDIR:INTERNAL=
-LibSoup_libsoup-3.0_LIBDIR:INTERNAL=
-LibSoup_libsoup-3.0_PREFIX:INTERNAL=
-LibSoup_libsoup-3.0_VERSION:INTERNAL=
+//ADVANCED property for variable: JAVA_INCLUDE_PATH
+JAVA_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JAVA_INCLUDE_PATH2
+JAVA_INCLUDE_PATH2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JAVA_JVM_LIBRARY
+JAVA_JVM_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_ARGN
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
-WebKit_CFLAGS:INTERNAL=-I/usr/include/webkitgtk-4.1;-I/usr/include/gtk-3.0;-I/usr/include/pango-1.0;-I/usr/include;-I/usr/include/cloudproviders;-I/usr/include/cairo;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/glycin-2;-I/usr/include/at-spi2-atk/2.0;-I/usr/include/at-spi-2.0;-I/usr/include/atk-1.0;-I/usr/lib64/pkgconfig/../../include/dbus-1.0;-I/usr/lib64/pkgconfig/../../lib64/dbus-1.0/include;-I/usr/include/fribidi;-I/usr/include/libxml2;-I/usr/include/pixman-1;-I/usr/include/harfbuzz;-I/usr/include/freetype2;-I/usr/include/libpng16;-I/usr/include/gio-unix-2.0;-I/usr/include/libsoup-3.0;-I/usr/include/libmount;-I/usr/include/blkid;-DWITH_GZFILEOP;-I/usr/include/glib-2.0;-I/usr/lib64/glib-2.0/include;-I/usr/include/sysprof-6;-pthread
-WebKit_CFLAGS_I:INTERNAL=
-WebKit_CFLAGS_OTHER:INTERNAL=-DWITH_GZFILEOP;-pthread
-WebKit_FOUND:INTERNAL=1
-WebKit_INCLUDEDIR:INTERNAL=/usr/include
-WebKit_INCLUDE_DIRS:INTERNAL=/usr/include/webkitgtk-4.1;/usr/include/gtk-3.0;/usr/include/pango-1.0;/usr/include;/usr/include/cloudproviders;/usr/include/cairo;/usr/include/gdk-pixbuf-2.0;/usr/include/glycin-2;/usr/include/at-spi2-atk/2.0;/usr/include/at-spi-2.0;/usr/include/atk-1.0;/usr/lib64/pkgconfig/../../include/dbus-1.0;/usr/lib64/pkgconfig/../../lib64/dbus-1.0/include;/usr/include/fribidi;/usr/include/libxml2;/usr/include/pixman-1;/usr/include/harfbuzz;/usr/include/freetype2;/usr/include/libpng16;/usr/include/gio-unix-2.0;/usr/include/libsoup-3.0;/usr/include/libmount;/usr/include/blkid;/usr/include/glib-2.0;/usr/lib64/glib-2.0/include;/usr/include/sysprof-6
-WebKit_LDFLAGS:INTERNAL=-L/usr/lib64;-lwebkit2gtk-4.1;-lgtk-3;-lgdk-3;-lpangocairo-1.0;-lcairo-gobject;-lgdk_pixbuf-2.0;-latk-1.0;-lpango-1.0;-lcairo;-lharfbuzz;-lsoup-3.0;-lgio-2.0;-lgmodule-2.0;-pthread;-lz;-ljavascriptcoregtk-4.1;-lgobject-2.0;-lglib-2.0
-WebKit_LDFLAGS_OTHER:INTERNAL=-pthread
-WebKit_LIBDIR:INTERNAL=/usr/lib64
-WebKit_LIBRARIES:INTERNAL=webkit2gtk-4.1;gtk-3;gdk-3;pangocairo-1.0;cairo-gobject;gdk_pixbuf-2.0;atk-1.0;pango-1.0;cairo;harfbuzz;soup-3.0;gio-2.0;gmodule-2.0;z;javascriptcoregtk-4.1;gobject-2.0;glib-2.0
-WebKit_LIBRARY_DIRS:INTERNAL=/usr/lib64
-WebKit_LIBS:INTERNAL=
-WebKit_LIBS_L:INTERNAL=
-WebKit_LIBS_OTHER:INTERNAL=
-WebKit_LIBS_PATHS:INTERNAL=
-WebKit_MODULE_NAME:INTERNAL=webkit2gtk-4.1
-WebKit_PREFIX:INTERNAL=/usr
-WebKit_STATIC_CFLAGS:INTERNAL=-I/usr/include/webkitgtk-4.1;-I/usr/include/gtk-3.0;-I/usr/include/pango-1.0;-I/usr/include;-I/usr/include/cloudproviders;-I/usr/include/cairo;-I/usr/include/gdk-pixbuf-2.0;-I/usr/include/glycin-2;-I/usr/include/at-spi2-atk/2.0;-I/usr/include/at-spi-2.0;-I/usr/include/atk-1.0;-I/usr/lib64/pkgconfig/../../include/dbus-1.0;-I/usr/lib64/pkgconfig/../../lib64/dbus-1.0/include;-I/usr/include/fribidi;-I/usr/include/libxml2;-I/usr/include/pixman-1;-I/usr/include/harfbuzz;-I/usr/include/freetype2;-I/usr/include/libpng16;-I/usr/include/gio-unix-2.0;-I/usr/include/libsoup-3.0;-I/usr/include/libmount;-I/usr/include/blkid;-DWITH_GZFILEOP;-I/usr/include/glib-2.0;-I/usr/lib64/glib-2.0/include;-I/usr/include/sysprof-6;-pthread;-DLZMA_API_STATIC
-WebKit_STATIC_CFLAGS_I:INTERNAL=
-WebKit_STATIC_CFLAGS_OTHER:INTERNAL=-DWITH_GZFILEOP;-pthread;-DLZMA_API_STATIC
-WebKit_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/webkitgtk-4.1;/usr/include/gtk-3.0;/usr/include/pango-1.0;/usr/include;/usr/include/cloudproviders;/usr/include/cairo;/usr/include/gdk-pixbuf-2.0;/usr/include/glycin-2;/usr/include/at-spi2-atk/2.0;/usr/include/at-spi-2.0;/usr/include/atk-1.0;/usr/lib64/pkgconfig/../../include/dbus-1.0;/usr/lib64/pkgconfig/../../lib64/dbus-1.0/include;/usr/include/fribidi;/usr/include/libxml2;/usr/include/pixman-1;/usr/include/harfbuzz;/usr/include/freetype2;/usr/include/libpng16;/usr/include/gio-unix-2.0;/usr/include/libsoup-3.0;/usr/include/libmount;/usr/include/blkid;/usr/include/glib-2.0;/usr/lib64/glib-2.0/include;/usr/include/sysprof-6
-WebKit_STATIC_LDFLAGS:INTERNAL=-L/usr/lib64;-lwebkit2gtk-4.1;-lgtk-3;-lgdk-3;-lpangocairo-1.0;-lm;-lXrandr;-lXcursor;-lXcomposite;-lXdamage;-lXinerama;-lcloudproviders;-lcairo-gobject;-lm;-ldl;-lgdk_pixbuf-2.0;-lm;-lglycin-2;-lseccomp;-llcms2;-pthread;-latk-bridge-2.0;-latspi;-lXtst;-lXi;-lXfixes;-latk-1.0;-L/usr/lib64/pkgconfig/../../lib64;-ldbus-1;-pthread;-lsystemd;-Wl,--export-dynamic;-lxkbcommon;-lwayland-cursor;-lwayland-egl;-lwayland-client;-lm;-pthread;-lrt;-lepoxy;-ldl;-lGL;-lEGL;-lpangoft2-1.0;-lm;-lpango-1.0;-lm;-lfribidi;-lthai;-ldatrie;-lXft;-lcairo;-lm;-ldl;-lfontconfig;-pthread;-lm;-lxml2;-lm;-llzma;-pthread;-lpthread;-lXext;-lXrender;-lX11;-lpthread;-lxcb-render;-lxcb-shm;-lxcb;-lXau;-lpixman-1;-lm;-pthread;-lharfbuzz-gobject;-lharfbuzz;-lm;-lfreetype;-lbz2;-lpng16;-lz;-lm;-lgraphite2;-lsoup-3.0;-ldl;-lgio-2.0;-lgmodule-2.0;-pthread;-lmount;-lblkid;-lselinux;-lsepol;-lsqlite3;-lm;-lpsl;-lbrotlidec;-lbrotlicommon;-lgssapi_krb5;-lkrb5;-lk5crypto;-lcom_err;-lkrb5support;-lz;-lnghttp2;-ljavascriptcoregtk-4.1;-lgobject-2.0;-lglib-2.0;-latomic;-lm;-lsysprof-capture-4;-Wl,-z,nodelete;-pthread;-lpcre2-8;-pthread;-lpthread;-lffi
-WebKit_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread;-Wl,--export-dynamic;-pthread;-pthread;-pthread;-pthread;-pthread;-Wl,-z,nodelete;-pthread;-pthread
-WebKit_STATIC_LIBDIR:INTERNAL=
-WebKit_STATIC_LIBRARIES:INTERNAL=webkit2gtk-4.1;gtk-3;gdk-3;pangocairo-1.0;m;Xrandr;Xcursor;Xcomposite;Xdamage;Xinerama;cloudproviders;cairo-gobject;m;dl;gdk_pixbuf-2.0;m;glycin-2;seccomp;lcms2;atk-bridge-2.0;atspi;Xtst;Xi;Xfixes;atk-1.0;dbus-1;systemd;xkbcommon;wayland-cursor;wayland-egl;wayland-client;m;rt;epoxy;dl;GL;EGL;pangoft2-1.0;m;pango-1.0;m;fribidi;thai;datrie;Xft;cairo;m;dl;fontconfig;m;xml2;m;lzma;pthread;Xext;Xrender;X11;pthread;xcb-render;xcb-shm;xcb;Xau;pixman-1;m;harfbuzz-gobject;harfbuzz;m;freetype;bz2;png16;z;m;graphite2;soup-3.0;dl;gio-2.0;gmodule-2.0;mount;blkid;selinux;sepol;sqlite3;m;psl;brotlidec;brotlicommon;gssapi_krb5;krb5;k5crypto;com_err;krb5support;z;nghttp2;javascriptcoregtk-4.1;gobject-2.0;glib-2.0;atomic;m;sysprof-capture-4;pcre2-8;pthread;ffi
-WebKit_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib64;/usr/lib64/pkgconfig/../../lib64
-WebKit_STATIC_LIBS:INTERNAL=
-WebKit_STATIC_LIBS_L:INTERNAL=
-WebKit_STATIC_LIBS_OTHER:INTERNAL=
-WebKit_STATIC_LIBS_PATHS:INTERNAL=
-WebKit_VERSION:INTERNAL=2.52.4
-WebKit_webkit2gtk-4.1_INCLUDEDIR:INTERNAL=
-WebKit_webkit2gtk-4.1_LIBDIR:INTERNAL=
-WebKit_webkit2gtk-4.1_PREFIX:INTERNAL=
-WebKit_webkit2gtk-4.1_VERSION:INTERNAL=
 __pkg_config_arguments_GIO:INTERNAL=REQUIRED;IMPORTED_TARGET;gio-2.0
 __pkg_config_arguments_GLIB:INTERNAL=REQUIRED;IMPORTED_TARGET;glib-2.0
 __pkg_config_arguments_GTK:INTERNAL=REQUIRED;IMPORTED_TARGET;gtk+-3.0
-__pkg_config_arguments_LibSoup:INTERNAL=REQUIRED;IMPORTED_TARGET;libsoup-3.0
-__pkg_config_arguments_WebKit:INTERNAL=IMPORTED_TARGET;webkit2gtk-4.1
 __pkg_config_checked_GIO:INTERNAL=1
 __pkg_config_checked_GLIB:INTERNAL=1
 __pkg_config_checked_GTK:INTERNAL=1
-__pkg_config_checked_LibSoup:INTERNAL=1
-__pkg_config_checked_WebKit:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_GIO_gio-2.0
 pkgcfg_lib_GIO_gio-2.0-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_GIO_glib-2.0
@@ -705,49 +696,5 @@ pkgcfg_lib_GTK_pango-1.0-ADVANCED:INTERNAL=1
 pkgcfg_lib_GTK_pangocairo-1.0-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_GTK_z
 pkgcfg_lib_GTK_z-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_LibSoup_gio-2.0
-pkgcfg_lib_LibSoup_gio-2.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_LibSoup_glib-2.0
-pkgcfg_lib_LibSoup_glib-2.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_LibSoup_gmodule-2.0
-pkgcfg_lib_LibSoup_gmodule-2.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_LibSoup_gobject-2.0
-pkgcfg_lib_LibSoup_gobject-2.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_LibSoup_soup-3.0
-pkgcfg_lib_LibSoup_soup-3.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_atk-1.0
-pkgcfg_lib_WebKit_atk-1.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_cairo
-pkgcfg_lib_WebKit_cairo-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_cairo-gobject
-pkgcfg_lib_WebKit_cairo-gobject-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_gdk-3
-pkgcfg_lib_WebKit_gdk-3-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_gdk_pixbuf-2.0
-pkgcfg_lib_WebKit_gdk_pixbuf-2.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_gio-2.0
-pkgcfg_lib_WebKit_gio-2.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_glib-2.0
-pkgcfg_lib_WebKit_glib-2.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_gmodule-2.0
-pkgcfg_lib_WebKit_gmodule-2.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_gobject-2.0
-pkgcfg_lib_WebKit_gobject-2.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_gtk-3
-pkgcfg_lib_WebKit_gtk-3-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_harfbuzz
-pkgcfg_lib_WebKit_harfbuzz-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_javascriptcoregtk-4.1
-pkgcfg_lib_WebKit_javascriptcoregtk-4.1-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_pango-1.0
-pkgcfg_lib_WebKit_pango-1.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_pangocairo-1.0
-pkgcfg_lib_WebKit_pangocairo-1.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_soup-3.0
-pkgcfg_lib_WebKit_soup-3.0-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_webkit2gtk-4.1
-pkgcfg_lib_WebKit_webkit2gtk-4.1-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_WebKit_z
-pkgcfg_lib_WebKit_z-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/usr/lib64
 

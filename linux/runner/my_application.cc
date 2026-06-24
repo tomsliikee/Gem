@@ -15,16 +15,25 @@ struct _MyApplication {
 G_DEFINE_TYPE(MyApplication, my_application, GTK_TYPE_APPLICATION)
 
 // Called when first Flutter frame received.
+// Commented out to prevent unused function warning/error (window is shown by window_manager in Dart)
+/*
 static void first_frame_cb(MyApplication* self, FlView* view) {
-  // Do not show the main launcher window. The app runs in the background and only spawns the Gemini webview.
-  // gtk_widget_show(gtk_widget_get_toplevel(GTK_WIDGET(view)));
+  gtk_widget_show(gtk_widget_get_toplevel(GTK_WIDGET(view)));
 }
+*/
 
 // Implements GApplication::activate.
 static void my_application_activate(GApplication* application) {
   MyApplication* self = MY_APPLICATION(application);
   GtkWindow* window =
       GTK_WINDOW(gtk_application_window_new(GTK_APPLICATION(application)));
+
+  // Enable RGBA visual channel to support native transparency / glassmorphism
+  GdkScreen* rgba_screen = gtk_widget_get_screen(GTK_WIDGET(window));
+  GdkVisual* visual = gdk_screen_get_rgba_visual(rgba_screen);
+  if (visual != nullptr && gdk_screen_is_composited(rgba_screen)) {
+    gtk_widget_set_visual(GTK_WIDGET(window), visual);
+  }
 
   // Use a header bar when running in GNOME as this is the common style used
   // by applications and is the setup most users will be using (e.g. Ubuntu
@@ -46,14 +55,14 @@ static void my_application_activate(GApplication* application) {
   if (use_header_bar) {
     GtkHeaderBar* header_bar = GTK_HEADER_BAR(gtk_header_bar_new());
     gtk_widget_show(GTK_WIDGET(header_bar));
-    gtk_header_bar_set_title(header_bar, "Gem");
+    gtk_header_bar_set_title(header_bar, "gem");
     gtk_header_bar_set_show_close_button(header_bar, TRUE);
     gtk_window_set_titlebar(window, GTK_WIDGET(header_bar));
   } else {
-    gtk_window_set_title(window, "Gem");
+    gtk_window_set_title(window, "gem");
   }
 
-  gtk_window_set_default_size(window, 400, 550);
+  gtk_window_set_default_size(window, 1280, 720);
 
   g_autoptr(FlDartProject) project = fl_dart_project_new();
   fl_dart_project_set_dart_entrypoint_arguments(
@@ -63,15 +72,16 @@ static void my_application_activate(GApplication* application) {
   GdkRGBA background_color;
   // Background defaults to black, override it here if necessary, e.g. #00000000
   // for transparent.
-  gdk_rgba_parse(&background_color, "#000000");
+  gdk_rgba_parse(&background_color, "rgba(0,0,0,0)");
   fl_view_set_background_color(view, &background_color);
   gtk_widget_show(GTK_WIDGET(view));
   gtk_container_add(GTK_CONTAINER(window), GTK_WIDGET(view));
 
   // Show the window when Flutter renders.
   // Requires the view to be realized so we can start rendering.
-  g_signal_connect_swapped(view, "first-frame", G_CALLBACK(first_frame_cb),
-                           self);
+  // Commented out to prevent visual flash on startup (window is shown by window_manager in Dart)
+  // g_signal_connect_swapped(view, "first-frame", G_CALLBACK(first_frame_cb),
+  //                          self);
   gtk_widget_realize(GTK_WIDGET(view));
 
   fl_register_plugins(FL_PLUGIN_REGISTRY(view));

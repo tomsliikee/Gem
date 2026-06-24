@@ -1,0 +1,21 @@
+# ninja log v7
+1	54	1781887667159057807	sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-mkdir	b7651c07bcc965b3
+1	54	1781887667159057807	/home/toms/projects/Gem/build/linux/x64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-mkdir	b7651c07bcc965b3
+55	3224	1781887670330055450	sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-download	e33070006be2ff9
+55	3224	1781887670330055450	/home/toms/projects/Gem/build/linux/x64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-download	e33070006be2ff9
+3224	3255	1781887670361055427	sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-update	b49315d750743f6b
+3224	3255	1781887670361055427	/home/toms/projects/Gem/build/linux/x64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-update	b49315d750743f6b
+3255	3286	1781887670392055404	sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-patch	89651c2cec304821
+3255	3286	1781887670392055404	/home/toms/projects/Gem/build/linux/x64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-patch	89651c2cec304821
+3286	3317	1781887670424055380	sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-configure	fb260093a357eb84
+3286	3317	1781887670424055380	/home/toms/projects/Gem/build/linux/x64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-configure	fb260093a357eb84
+3317	3348	1781887670455055358	sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-build	d7caae7cb768ad64
+3317	3348	1781887670455055358	/home/toms/projects/Gem/build/linux/x64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-build	d7caae7cb768ad64
+3348	3380	1781887670486055334	sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-install	6338aca685004daf
+3348	3380	1781887670486055334	/home/toms/projects/Gem/build/linux/x64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-install	6338aca685004daf
+3380	3416	1781887670522055308	sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-test	4cb42fc42784785f
+3380	3416	1781887670522055308	/home/toms/projects/Gem/build/linux/x64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-test	4cb42fc42784785f
+3416	3509	1781887670613055240	CMakeFiles/sqlite3-populate-complete	bdf891f3401ae7ff
+3416	3509	1781887670613055240	sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-done	bdf891f3401ae7ff
+3416	3509	1781887670613055240	/home/toms/projects/Gem/build/linux/x64/release/_deps/sqlite3-subbuild/CMakeFiles/sqlite3-populate-complete	bdf891f3401ae7ff
+3416	3509	1781887670613055240	/home/toms/projects/Gem/build/linux/x64/release/_deps/sqlite3-subbuild/sqlite3-populate-prefix/src/sqlite3-populate-stamp/sqlite3-populate-done	bdf891f3401ae7ff

@@ -1,89 +1,74 @@
-# Gem
+# Gem (Personal Life OS & Antigravity Assistant)
 
-A minimal, lightweight, and native desktop client wrapper for Google Gemini. Designed to look and feel like a native application on both Linux and Windows.
+Gem is a Flutter-based desktop application designed for Windows and Linux that acts as a Personal Life OS and a frontend interface for the Antigravity (`agy`) agentic system. It features a modern, visually stunning glassmorphic UI, real-time health data synchronization, interactive process tree rendering, and terminal/chat integrations.
 
-<p align="center">
-  <img src="assets/icon.png" width="128" height="128" alt="Gem App Icon">
-</p>
+![Gem App Icon](icon.png)
 
-## Why Gem?
+## Features
 
-Unlike pinning a browser tab or using a generic web shortcut, Gem is built as a native desktop shell. It solves common web-wrapper pain points:
+- **Visually Stunning Glassmorphic UI**: Uses custom themes, glowing gradients with transparency, and modern typography to deliver a premium user experience.
+- **Google OAuth 2.0 & Fit REST API Integration**: Performs a desktop loopback OAuth flow to sync and locally cache metrics like steps, sleep, heart rate, and calories.
+- **Process Wrapper & CLI Integration**: Integrates directly with the `agy` command-line tool. Start, stop, and send interactive inputs to subprocesses in real-time.
+- **Subagent Node Visualizer**: Monitors `~/.gemini/antigravity-cli/brain/*.jsonl` transcripts dynamically to render an interactive node tree of active subagents and their states.
 
-* **Isolated Cookie Vault:** Sessions are saved locally in a secure SQLite database (`~/.config/gem/cookies.db` on Linux). You remain logged in.
-* **Instant Window-Close:** Close signals are caught directly at the C++ layer. When you close the Gemini window, the entire application shuts down instantly on system level.
-* **Seamless Shell Integration:** The application matches GNOME's WMClass (using `com.google.gemini`). Windows group perfectly under a single dock icon.
-* **Native Browser Redirects:** Internal Gemini links stay inside the app, while external references open in your default browser.
-* **Sandboxed Security:** Strict separation of the webpage context and local filesystem access (`contextIsolation` and `sandbox` rules enabled).
+## Architecture
 
----
+Gem follows the principles of Clean Architecture:
+- **Presentation Layer**: Riverpod state management, custom-drawn charts, node tree visualizer, and a chat window interface.
+- **Domain Layer**: Core entity definitions (`HealthMetric`, `SubagentNode`, `ProcessState`) and repository interfaces.
+- **Data Layer**: Processes handling, JSONL file monitoring (`BrainMonitor`), OAuth loopback service, local caching repositories, and API clients.
 
-## Codebase Structure
+## File Structure
 
 ```
-Gem/
-├── assets/
-│   └── icon.png          # App icon (transparent, upscaled vector logo)
-├── lib/
-│   ├── main.dart         # Flutter application entry point
-│   └── src/
-│       ├── app.dart              # Main app configuration
-│       ├── services/
-│       │   └── webview_service.dart # Webview & lifecycle logic
-│       └── ui/
-│           ├── launcher_screen.dart # Main user interface
-│           └── components/
-│               └── app_logo.dart    # Optimized logo widget
-├── linux/
-│   ├── runner/
-│   │   └── my_application.cc  # C++ GTK Window lifecycle & hidden launcher
-│   └── CMakeLists.txt         # App compilation config (WMClass com.google.gemini)
-├── windows/
-│   ├── runner/
-│   │   ├── main.cpp           # Win32 entrypoint & custom launcher size
-│   │   └── flutter_window.cpp # Win32 window lifecycle & hidden launcher
-│   └── CMakeLists.txt         # C++ build instructions
-├── gem.desktop           # Linux desktop entry launcher shortcut
-├── setup.sh              # Automatic Linux compiler and installer
-└── pubspec.yaml          # Project dependency definition
+lib/
+├── main.dart             # Application entry point & window management setup
+├── core/                 # Shared styling themes, decorations, and constants
+├── data/
+│   ├── models/           # JSON parsers for Fit metrics, App configs, and JSONL transcripts
+│   ├── repositories/     # SQLite local caching, CLI Process execution, and directory scanning
+│   └── services/         # OAuth 2.0 loopback servers and REST clients
+├── domain/
+│   ├── entities/         # Data structures (Health metrics, agent nodes)
+│   └── repositories/     # Interface definitions
+└── presentation/
+    ├── providers/        # Riverpod providers (Auth status, health metrics history, process monitoring)
+    └── widgets/          # Custom widgets (DashboardView, Glassmorphic headers, Line charts, Node graphs)
 ```
 
----
+## Getting Started
 
-## Installation & Build
+### Prerequisites
 
-### Linux (Fedora/Ubuntu/Debian)
+- Flutter SDK (version `^3.12.0` or higher)
+- Visual Studio (with C++ Desktop development workload) for Windows, or build tools (`clang`, `cmake`, `ninja`, `pkg-config`) for Linux.
+- An `agy` CLI installed on your path or configured in the app settings.
+- A `config.json` containing Google OAuth credentials placed at the root of the project:
+  ```json
+  {
+    "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
+    "client_secret": "YOUR_CLIENT_SECRET",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token"
+  }
+  ```
 
-Make sure you have the required compiler headers installed.
+### Build & Run Instructions
 
-**Fedora:**
+#### Running the application locally:
 ```bash
-sudo dnf install -y webkit2gtk4.1-devel libsoup3-devel
+# Run in development mode
+flutter run -d windows  # For Windows
+flutter run -d linux    # For Linux
 ```
 
-**Ubuntu/Debian:**
+#### Running the tests:
 ```bash
-sudo apt install -y libwebkit2gtk-4.1-dev libsoup-3.0-dev
+# Run all unit, widget, and E2E tests
+flutter test
 ```
 
-Then, run the automatic installer script inside the project directory:
-```bash
-./setup.sh
-```
-This compiles the release binary, creates the desktop shortcut, registers the icon, and makes `Gem` searchable in your desktop environment's launcher menu.
+## Windows & Linux Executable Configuration
 
----
-
-## Windows Compilation
-
-You can compile the app natively on Windows by following these steps:
-
-1. Install the [Flutter SDK](https://docs.flutter.dev/get-started/install/windows/desktop).
-2. Install [Visual Studio 2022 Community Edition](https://visualstudio.microsoft.com/vs/) with the **"Desktop development with C++"** workload selected.
-3. Open a command prompt inside the project folder and run:
-   ```cmd
-   flutter build windows --release
-   ```
-4. The compiled executable and assets will be outputted to:
-   `build\windows\x64\release\bundle\`
-5. Open `gem.exe` and pin it to your taskbar!
+- **App Icon**: The application uses `icon.png` (converted to `windows/runner/resources/app_icon.ico` for the native Windows taskbar and application window).
+- **Frameless Window**: Custom custom chrome handles minimizing, maximizing, closing, and window dragging seamlessly across both Windows and Linux platforms.

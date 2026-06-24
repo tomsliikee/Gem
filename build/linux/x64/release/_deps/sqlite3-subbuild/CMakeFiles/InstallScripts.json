@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/toms/projects/Gem/build/linux/x64/release/_deps/sqlite3-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

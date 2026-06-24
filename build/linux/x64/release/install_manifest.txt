@@ -1,8 +1,11 @@
 /home/toms/projects/Gem/build/linux/x64/release/bundle/gem
 /home/toms/projects/Gem/build/linux/x64/release/bundle/data/icudtl.dat
 /home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libflutter_linux_gtk.so
-/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libdesktop_webview_window_plugin.so
-/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/assets/icon.png
+/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libscreen_retriever_linux_plugin.so
+/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libsqlite3_flutter_libs_plugin.so
+/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libwindow_manager_plugin.so
+/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libsqlite3.so
+/home/toms/projects/Gem/build/linux/x64/release/bundle/lib/native_assets.json
 /home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 /home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 /home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/shaders/ink_sparkle.frag
@@ -12,4 +15,8 @@
 /home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/FontManifest.json
 /home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/NOTICES.Z
 /home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/version.json
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/native_assets/jniLibs/lib/armeabi-v7a/libsqlite3.so
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/vm_snapshot_data
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/isolate_snapshot_data
+/home/toms/projects/Gem/build/linux/x64/release/bundle/data/flutter_assets/.last_build_id
 /home/toms/projects/Gem/build/linux/x64/release/bundle/lib/libapp.so
